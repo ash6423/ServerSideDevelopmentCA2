@@ -1,0 +1,34 @@
+
+/* the header styles for the html elements */
+
+header {
+    margin: 0;
+    border-bottom: 2px solid black;
+}
+header h1 {
+    margin: 0;
+    padding: .5em 0;
+    color: black;
+}
+main {
+    margin: 0;
+}
+aside {
+    float: left;
+    width: 150px;
+}
+nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+nav ul li {
+    padding-bottom: 0.5em;
+}
+section {
+    float: left;
+    width: 800PX;
+    padding-bottom: 1.5em;
+}
+
+
