@@ -1,13 +1,16 @@
 <?php
 // Get the data
-$shoe_id = filter_input(INPUT_POST, 'shoe_id', FILTER_VALIDATE_INT);
-$brand_id = filter_input(INPUT_POST, 'brand_id', FILTER_VALIDATE_INT);
+$record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
+$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $code = filter_input(INPUT_POST, 'code');
+$size = filter_input(INPUT_POST, 'size', FILTER_VALIDATE_INT );
+$colour = filter_input(INPUT_POST, 'colour');
+$stockQuantity = filter_input(INPUT_POST, 'stockQuantity', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 // Validate inputs
-if ($shoe_id == NULL || $shoe_id == FALSE || $brand_id == NULL ||
-$brand_id == FALSE || empty($code) || empty($name) ||
+if ($record_id == NULL || $record_id == FALSE || $category_id == NULL ||
+$category_id == FALSE || empty($code) || empty($name) ||
 $price == NULL || $price == FALSE) {
 $error = "Invalid data. Check all fields and try again.";
 include('error.php');
@@ -40,25 +43,32 @@ $image = $original_image; // old image from database
 }
 // End Image upload
 
-// If valid, update the shoes in the database
+// If valid, update the records in the database
 require_once('database.php');
-$query = 'UPDATE shoes
-SET categoryID = :brand_id,
+$query = 'UPDATE records
+SET categoryID = :category_id,
 code = :code,
 name = :name,
 price = :price,
+size = :size,
+colour = :colour,
+stockQuantity = :stockQuantity,
 image = :image
-WHERE shoeID = :shoe_id';
+WHERE recordID = :record_id';
 $statement = $db->prepare($query);
-$statement->bindValue(':brand_id', $brand_id);
+$statement->bindValue(':category_id', $category_id);
 $statement->bindValue(':code', $code);
 $statement->bindValue(':name', $name);
+$statement->bindValue(':size', $size);
+$statement->bindValue(':colour', $colour);
+$statement->bindValue(':stockQuantity', $stockQuantity);
 $statement->bindValue(':price', $price);
 $statement->bindValue(':image', $image);
-$statement->bindValue(':shoe_id', $shoe_id);
+$statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $statement->closeCursor();
 // Display the index page
 include('index.php');
 }
 ?>
+© 2020 GitHub, Inc.

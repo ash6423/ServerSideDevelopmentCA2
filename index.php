@@ -83,7 +83,7 @@ $statement3->closeCursor();
 <td><?php echo $record['code']; ?></td>
 <td><?php echo $record['size']; ?></td>
 <td><?php echo $record['colour']; ?></td>
-<td><?php echo $record['stockQuantity'0.................]; ?></td>
+<td><?php echo $record['stockQuantity']; ?></td>
 <td><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">

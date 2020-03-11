@@ -1,13 +1,14 @@
 /* the header styles for the html elements */
 header {
   margin: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid plum;
 }
 
 header h1 {
   margin: 0;
   padding: .5em 0;
-  color: black;
+  color: plum;
+  text-align: center;
 }
 
 main {

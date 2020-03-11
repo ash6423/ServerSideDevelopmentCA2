@@ -7,7 +7,7 @@ if ($name == null) {
     include('error.php');
 } else {
     require_once('database.php');
-    // Add the shoe to the database
+    // Add the record to the database
     $query = "INSERT INTO categories (categoryName)
               VALUES (:name)";
     $statement = $db->prepare($query);

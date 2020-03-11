@@ -3,7 +3,11 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $code = filter_input(INPUT_POST, 'code');
 $name = filter_input(INPUT_POST, 'name');
+$size = filter_input(INPUT_POST, 'size');
+$colour = filter_input(INPUT_POST, 'colour');
+$stockQuantity = filter_input(INPUT_POST, 'stockQuantity');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+
 // Validate inputs
 if ($category_id == null || $category_id == false ||
         $code == null || $name == null || $price == null || $price == false) {
@@ -52,19 +56,22 @@ if ($category_id == null || $category_id == false ||
 // End Image upload
     
     require_once('database.php');
-    // Add the shoes to the database 
-    $query = "INSERT INTO shoes
-                 (categoryID, code, name, price, image)
+    // Add the records to the database 
+    $query = "INSERT INTO records
+                 (categoryID, code, name, price, size, colour, stockQuantity, image)
               VALUES
-                 (:category_id, :code, :name, :price, :image)";
+                 (:category_id, :code, :name, :price, :size, :colour, :stockQuantity, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':code', $code);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
+    $statement->bindValue(':size', $size);
+    $statement->bindValue(':colour', $colour);
+    $statement->bindValue(':stockQuantity', $stockQuantity);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();
-// Display the shoes List page
+// Display the records List page
     include('index.php');
 }
