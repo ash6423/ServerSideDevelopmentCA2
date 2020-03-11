@@ -44,12 +44,12 @@ $statement3->closeCursor();
 </head>
 <!-- the body section -->
 <body>
-<header><h1>PHP CRUD</h1></header>
+<header><h1>Aisling's Shoes!!!</h1></header>
 <main>
 <h1>Record List</h1>
 <aside>
 <!-- display a list of categories in the sidebar-->
-<h2>Categories</h2>
+<h2>Brands</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -69,6 +69,9 @@ $statement3->closeCursor();
 <th>Image</th>
 <th>Name</th>
 <th>Code</th>
+<th>Size</th>
+<th>Colour</th>
+<th>Stock Quantity</th>
 <th>Price</th>
 <th>Delete</th>
 <th>Edit</th>
@@ -78,6 +81,9 @@ $statement3->closeCursor();
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
 <td><?php echo $record['code']; ?></td>
+<td><?php echo $record['size']; ?></td>
+<td><?php echo $record['colour']; ?></td>
+<td><?php echo $record['stockQuantity'0.................]; ?></td>
 <td><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
@@ -98,8 +104,8 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Edit Categories</a></p>
+<p><a href="add_record_form.php">Add New Shoe Record</a></p>
+<p><a href="category_list.php">Edit Brands</a></p>
 </section>
 </main>
 <footer>
