@@ -34,27 +34,27 @@ $statement->closeCursor();
             <br>
 
             <label>Code:</label>
-            <input type="input" name="code">
+            <input type="input" name="code" required>
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" required>
             <br>
 
             <label>Size:</label>
-            <input type="input" name="size">
+            <input type="input" name="size" required>
             <br>
 
             <label>Price:</label>
-            <input type="input" name="price">
+            <input type="input" name="price" required>
             <br>
 
             <label>Colour:</label>
-            <input type="input" name="colour">
+            <input type="input" name="colour" required>
             <br>
 
             <label>Stock Quantity:</label>
-            <input type="input" name="stockQuantity">
+            <input type="input" name="stockQuantity" required>
             <br>
 
             <label>Image:</label>

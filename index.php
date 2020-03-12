@@ -1,3 +1,4 @@
+
 <?php
 // Connect to the database
 require_once('database.php');
@@ -62,6 +63,7 @@ $statement3->closeCursor();
 </nav>
 </aside>
 <section>
+
 <!-- display a table of records from the database -->
 <h2><?php echo $category_name; ?></h2>
 <table>

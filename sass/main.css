@@ -7,7 +7,7 @@ header {
 header h1 {
   margin: 0;
   padding: .5em 0;
-  color: plum;
+  color: #BCBDFF;
   text-align: center;
 }
 
@@ -46,17 +46,17 @@ body {
   width: 1000px;
   margin: 0 auto;
   background-color: white;
-  border: 1px solid black;
+  border: 4px solid plum;
   padding: .5em 2em;
 }
 
 table {
-  border: 1px solid black;
+  border: 5px solid plum;
   border-collapse: collapse;
 }
 
 td, th {
-  border: 1px dashed black;
+  border: 2px dashed plum;
   padding: .2em .5em .2em .5em;
   vertical-align: top;
   text-align: left;
@@ -118,7 +118,7 @@ h2 {
 }
 
 h1, h2 {
-  color: #333;
+  color: #BCBDFF;
 }
 
 ul {
@@ -137,13 +137,13 @@ a {
 }
 
 a:hover {
-  color: #d08504;
+  color: #645ffa;
 }
 
 footer {
   clear: both;
   margin-top: 1em;
-  border-top: 2px solid black;
+  border-top: 2px solid plum;
 }
 
 footer p {
