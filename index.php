@@ -111,7 +111,7 @@ value="<?php echo $record['categoryID']; ?>">
 </section>
 </main>
 <footer>
-<p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+<p>&copy; <?php echo date("Y"); ?> Aisling's Shoes, Inc.</p>
 </footer>
 </body>
 </html>

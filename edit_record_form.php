@@ -14,12 +14,12 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Edit a Record</title>
+    <link rel="stylesheet" type="text/css" href="./sass/main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Edit a Record</h1></header>
     <main>
         <h1>Edit record</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
@@ -67,7 +67,7 @@ $statement->closeCursor();
         </form>
     </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Aisling's Shoes, Inc.</p>
     </footer>
 </body>
 </html>

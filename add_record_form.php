@@ -12,12 +12,12 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Add a Record</title>
+    <link rel="stylesheet" type="text/css" href="./sass/main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Add a Record</h1></header>
 
     <main>
         <h1>Add Record</h1>
@@ -67,7 +67,7 @@ $statement->closeCursor();
         <p><a href="index.php">Homepage</a></p>
     </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Aisling's Shoes, Inc.</p>
     </footer>
 </body>
 </html>
