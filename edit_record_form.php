@@ -32,27 +32,27 @@ $statement->closeCursor();
                    value="<?php echo $record['categoryID']; ?>">
             <br>
             <label>Code:</label>
-            <input type="input" name="code"
+            <input type="input" name="code" required
                    value="<?php echo $record['code']; ?>">
             <br>
             <label>Name:</label>
-            <input type="input" name="name"
+            <input type="input" name="name" required
                    value="<?php echo $record['name']; ?>">
             <br>
             <label>Size:</label>
-            <input type="input" name="size"
+            <input type="input" name="size" required
                    value="<?php echo $record['size']; ?>">
             <br>
             <label>Colour:</label>
-            <input type="input" name="colour"
+            <input type="input" name="colour" required
                    value="<?php echo $record['colour']; ?>">
             <br>
             <label>Stock Quantity:</label>
-            <input type="input" name="stockQuantity"
+            <input type="input" name="stockQuantity" required
                    value="<?php echo $record['stockQuantity']; ?>">
             <br>
             <label>Price:</label>
-            <input type="input" name="price"
+            <input type="input" name="price" required
                    value="<?php echo $record['price']; ?>">
             <br>
             <label>Image:</label>

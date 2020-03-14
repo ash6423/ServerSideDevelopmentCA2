@@ -11,7 +11,7 @@ if ($name == null) {
     $query = "INSERT INTO categories (categoryName)
               VALUES (:name)";
     $statement = $db->prepare($query);
-    $statement->bindValue(':name', $name);
+    $statement->bindValue(':name', $name required);
     $statement->execute();
     $statement->closeCursor();
     // Display the Category List page

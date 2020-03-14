@@ -65,7 +65,7 @@ $statement3->closeCursor();
 <section>
 
 <!-- display a table of records from the database -->
-<h2><?php echo $category_name; ?></h2>
+<h2><?php echo $category_name; ?><img src="./image_uploads/runningIcon.png" alt="running" height="32" width="32"></h2>
 <table>
 <tr>
 <th>Image</th>
