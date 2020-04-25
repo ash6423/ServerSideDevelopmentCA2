@@ -74,3 +74,15 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `records`
   MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+
+CREATE TABLE `shoecare` (
+  `categoryID` int(11) NOT NULL,
+  `protectorSpray` varchar(25) NOT NULL,
+  `polish` varchar(25) NOT NULL,
+  `suedeCleaner` varchar(25) NOT NULL,
+  `laces` varchar(25) NOT NULL,
+  `price` int(11) NOT NULL,
+  `image` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+COMMIT;
