@@ -27,6 +27,7 @@ if(isset($_POST['login'])){
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
     
+    
     //Retrieve the user account information for the given username.
     $sql = "SELECT id, username, password FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);
@@ -85,7 +86,8 @@ if(isset($_POST['login'])){
             <label for="username">Username</label>
             <input type="text" id="username" name="username"><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><br>
+            <label><input type="checkbox"> Remember me</label>
             <input type="submit" name="login" value="Login">
         </form>
     </body>
